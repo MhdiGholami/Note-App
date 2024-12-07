@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'EduTASBeginner';
+    src: url(../fonts/EduTASBeginner-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EduTASBeginner';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #ab3ce7, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-container {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.0px);
+    -webkit-backdrop-filter: blur(3.0px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.my-notes {
+    width: 93%;
+    height: 100%;
+    padding: 40px;
+}
+
+.my-notesTitle {
+    width: 100%;
+    height: 10%;
+    font-size: 32px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.my-notesBox {
+    width: 100%;
+    height: 90%;
+}
+
+.notesBox-title {
+    transform: translateY(200%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+
+.notes-parent {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 7%;
+    height: 100%;
+    position: relative;
+    background-color: white;
+    border-radius: 30px 0 0 30px;
+}
+
+.plus-btn {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.color-list {
+    visibility: hidden;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s cubic-bezier(1, -0.24, 0.15, 1.35);
+    z-index: 10;
+}
+
+.color-li {
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.note {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.note-text {
+    width: 100%;
+    height: 80%;
+    font-size: 18px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    line-height: 1.2rem;
+    resize: none;
+}
+
+.note-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icons-parent {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-time {
+    width: 70%;
+    display: flex;
+    padding-left: 5px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.edit-btn {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+    width: 100%;
+}
